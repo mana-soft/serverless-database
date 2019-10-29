@@ -13,32 +13,23 @@
 
 ## Usage
 ```javascript
-const db = require('@mana-soft/serverless-database')({
-    client: 'mysql',
-    connection: {
-        host: '127.0.0.1',
-        port: '3306',
-        user: 'root',
-        password: 'root',
-        database: 'manasoft',
-        timezone: 'utc',
-    },
-    pool: {min: 0, max: 1},
-});
+const db = require('@mana-soft/serverless-database');
 
-db.knex('company as c')
-.select()
-.where('c.id', 44)
-.then((res) => {
-    console.log('RES');
-    console.log(res);
-})
-.catch((err) => {
-    console.log('ERR');
-    console.log(err);
-})
-.finally(() => {
-    db.release();
+db.init({}, (err, payload) => {
+    payload.knex('company as c')
+    .select()
+    .where('c.id', 44)
+    .then((res) => {
+        console.log('RES');
+        console.log(res);
+    })
+    .catch((err) => {
+        console.log('ERR');
+        console.log(err);
+    })
+    .finally(() => {
+        db.release();
+    });
 });
 ```
 Here we create a new database instance on call, then we need to release it when we don't need it anymore.
