@@ -1,0 +1,26 @@
+{
+  "name": "@mana-soft/serverless-database",
+  "version": "0.1.0",
+  "description": "Manage database connections for ManaSoft's lambdas",
+  "main": "index.js",
+  "author": "mana-soft",
+  "repository": "git@github.com:mana-soft/serverless-database.git",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "build": "rm -rf lib/* && babel src --out-dir lib --copy-files",
+    "test": "echo 'No tests implemented'"
+  },
+  "dependencies": {
+    "knex": "^0.19.5",
+    "mysql": "^2.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3"
+  }
+}
