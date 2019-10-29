@@ -1,6 +1,6 @@
 {
   "name": "@mana-soft/serverless-database",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Manage database connections for ManaSoft's lambdas",
   "main": "index.js",
   "author": "mana-soft",
