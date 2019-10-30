@@ -36,7 +36,8 @@ Here we create a new database instance on call, then we need to release it when 
 
 ---
 
-## Configure (once for all @mana-soft packages)
+## Configure
+(once for all @mana-soft packages)
 * Create an npm account
 * Ask for an admin to add your account to the oraganization
 * Log in your CLI
