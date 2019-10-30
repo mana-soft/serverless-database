@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "prepublish": "npm run build",
     "build": "rm -rf lib/* && babel src --out-dir lib --copy-files",
     "test": "echo 'No tests implemented'"
   },
