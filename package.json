@@ -7,9 +7,6 @@
   "repository": "git@github.com:mana-soft/serverless-database.git",
   "license": "MIT",
   "private": false,
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "build": "rm -rf lib/* && babel src --out-dir lib --copy-files",
     "test": "echo 'No tests implemented'"
